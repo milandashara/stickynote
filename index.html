@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="main.css">
+ 
+  <meta charset="UTF-8">
+  <title>Sticky Note</title>
+</head>
+<body>
+
+
+
+
+
+<div class="row">
+  <p class="page-title">Sticky Note</p>
+
+  <form action="javascript:void(0);" method="POST" onsubmit="app.Search()"> 
+  <input type="text" id="search-str" placeholder="Search Note">
+  <input type="submit" value="Search" class="button">
+  </form>
+
+<form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
+  <input type="text" id="add-name" placeholder="New note">
+  <input type="submit" value="Add" class="button">
+</form>
+
+<div id="spoiler" role="aria-hidden">
+  <form action="javascript:void(0);" method="POST" id="saveEdit">
+    <input type="text" id="edit-name">
+    <input type="submit" value="Edit" class="button"/> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+  </form>
+</div>
+<p id="counter"></p>
+
+  <table>
+      <thead>
+          <tr>
+            <th>Note</th>
+          </tr>
+        </thead>
+    
+      <tbody id="notes">
+      </tbody>
+  </table>
+</div>
+
+
+
+
+</body>
+ <script src="sticky.js"></script>
+</html>
